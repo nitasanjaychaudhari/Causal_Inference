@@ -1,0 +1,107 @@
+Causal inference is the process of identifying and understanding cause-and-effect relationships between variables by distinguishing correlation from causation, often by using methods to control for confounding factors.
+
+A classic example of causal inference is determining whether taking aspirin causes a headache to disappear. While a correlation exists, meaning the headache disappears after taking aspirin, causal inference requires further investigation to rule out other factors such as the headache subsiding on its own or a placebo effect.
+
+Correlation means two variables tend to change together, while causation means one variable directly causes a change in the other.
+
+In causal inference, counterfactuals represent potential outcomes, which are the hypothetical results of what would have happened under different conditions that did not actually occur.
+
+The Potential Outcomes Framework, also known as the Neyman-Rubin Causal Model, defines a causal effect for an individual as the difference between two potential outcomes, one if they receive a treatment and one if they do not. Since both outcomes for a single individual cannot be observed simultaneously, the framework relies on assumptions and statistical methods to estimate the average causal effect across a population. This framework provides a formal way to think about and quantify causal relationships, helping to distinguish association from causation.
+
+The treatment effect refers to the difference in outcomes between individuals or groups who receive a treatment and those who do not. It measures the impact of a specific intervention or treatment.
+
+The Average Treatment Effect (ATE) is the average difference in outcomes between individuals who receive a treatment and those who do not.
+
+The Individual Treatment Effect (ITE) is the difference in outcome for the same individual if they had received the treatment compared to if they had not.
+
+The Conditional Average Treatment Effect (CATE) is the average causal effect of a treatment for a specific subgroup of individuals defined by their characteristics.
+
+The Local Average Treatment Effect (LATE) is the average effect of treatment for individuals who comply with their assigned treatment in an instrumental variables setting.
+
+The Marginal Treatment Effect (MTE) is the treatment effect for individuals who are indifferent between receiving or not receiving the treatment.
+
+The Stable Unit Treatment Value Assumption (SUTVA) states that the potential outcome of an individual depends only on the treatment they receive, and not on the treatments assigned to others, and that the treatment is consistently defined. It assumes there is no interference or spillover effect between units.
+
+Ignorability or unconfoundedness assumes that, conditional on observed covariates, treatment assignment is independent of potential outcomes.
+
+The Positivity or Overlap Assumption states that every individual has a nonzero probability of receiving each treatment option, ensuring that groups are comparable.
+
+The Consistency Assumption states that the observed outcome is equal to the potential outcome under the treatment that the individual actually received.
+
+Randomized Controlled Trials (RCTs) are scientific experiments that compare treatments or interventions by randomly assigning participants to different groups. Randomization ensures that groups are similar, allowing for fair comparisons and reducing bias in estimating the effectiveness of a treatment compared to a control.
+
+Single-blinding means that only the participants do not know their assigned treatment group, while double-blinding means that neither participants nor the researchers interacting with them are aware of group assignments. These methods prevent bias, with double-blinding providing stronger protection and more reliable results.
+
+A placebo effect occurs when a patient experiences improvement in outcomes due to the belief of being treated, independent of the actual effect of the treatment.
+
+Attrition refers to the loss of participants from a study, which can bias results if the dropout is related to treatment or outcomes.
+
+Noncompliance occurs when participants in a randomized trial do not follow their assigned treatment condition, such as when participants in the treatment group fail to take the treatment or participants in the control group obtain it.
+
+Selection bias occurs when participants are chosen in a nonrandom way that is related to treatment or outcomes, distorting causal estimates.
+
+A confounding variable is an unobserved or unaccounted-for factor that influences both the treatment and the outcome, leading to misleading associations. For example, in a study on exercise and weight loss, overall healthy lifestyle may be a confounder because it influences both exercise habits and weight.
+
+Propensity Score Matching (PSM) is a method for reducing bias in observational studies by creating comparable treatment and control groups based on the probability of receiving treatment.
+
+Inverse Probability Weighting (IPW) adjusts for selection bias by assigning weights to individuals based on their probability of being treated or selected.
+
+Covariate adjustment using regression estimates the true effect of treatment by controlling for other measured variables that influence the outcome. This approach, often called Analysis of Covariance (ANCOVA), reduces bias from baseline imbalances and improves precision in treatment effect estimates.
+
+Instrumental Variables (IV) are variables that influence treatment assignment but affect the outcome only through the treatment, allowing researchers to address unobserved confounding.
+
+Difference-in-Differences (DiD) estimates causal effects by comparing changes in outcomes over time between a treated group and a control group.
+
+Regression Discontinuity Design (RDD) estimates causal effects by exploiting a cutoff rule on a continuous variable that determines treatment eligibility.
+
+The Synthetic Control Method constructs a weighted combination of control units to approximate the counterfactual outcome of a treated unit.
+
+The Front-door Criterion identifies causal effects using mediators under certain conditions, even when unobserved confounding exists.
+
+Directed Acyclic Graphs (DAGs) are visual tools that represent presumed causal relationships between variables, helping identify confounders, mediators, and colliders to determine if causal effects can be identified from data. They are essential in clarifying assumptions and avoiding biases before statistical analysis.
+
+D-separation is a graphical criterion that determines whether two variables in a DAG are conditionally independent, based on whether all paths between them are blocked by a conditioning set of variables.
+
+A backdoor path is a non-causal association between treatment and outcome that results from a common cause affecting both.
+
+The Backdoor Criterion provides conditions under which controlling for a set of variables blocks all backdoor paths and allows correct identification of causal effects.
+
+Collider bias occurs when conditioning on a variable that is a common effect of two other variables, which creates spurious associations.
+
+M-bias occurs when adjusting for certain colliders introduces bias into causal estimates.
+
+Do-calculus is a set of algebraic rules developed by Judea Pearl that identify causal effects in DAGs.
+
+Causal identification refers to determining whether a causal effect can be estimated from observed data given assumptions.
+
+Causal mediation analysis decomposes the total effect of a treatment into a direct effect and an indirect effect that operates through a mediator.
+
+Uplift modeling measures the incremental impact of treatment for each individual, distinguishing between those who respond positively, negatively, or not at all.
+
+The Intention-to-Treat (ITT) effect estimates the impact of being assigned to treatment regardless of whether participants comply with the assignment.
+
+The Per-Protocol Effect estimates the effect of actually adhering to treatment as assigned.
+
+Causal discovery is the process of learning the underlying causal structure from data using algorithms such as PC, FCI, or LiNGAM.
+
+Sensitivity analysis tests how robust causal conclusions are to the presence of unobserved confounding.
+
+Balance checking verifies that covariates are balanced across treatment groups after applying methods such as matching or weighting.
+
+External validity refers to the extent to which causal findings can be generalized to other populations or settings.
+
+Internal validity refers to the degree to which the design of a study supports valid causal conclusions.
+
+Causal forests are tree-based machine learning models designed to estimate heterogeneous treatment effects.
+
+Bayesian causal inference applies Bayesian methods to estimating causal effects and incorporating prior knowledge.
+
+G-computation, also known as the G-formula, estimates causal effects by modeling the outcome distribution under different treatment scenarios.
+
+Targeted Maximum Likelihood Estimation (TMLE) combines machine learning with statistical estimation to provide efficient and unbiased causal effect estimates.
+
+Marginal Structural Models (MSM) use inverse probability weighting to estimate causal effects in longitudinal studies where confounders vary over time.
+
+Natural experiments are real-world situations where treatment assignment occurs as if random, enabling causal inference without explicit randomization.
+
+Principal stratification is a framework that accounts for post-treatment variables, such as compliance, when estimating causal effects.
